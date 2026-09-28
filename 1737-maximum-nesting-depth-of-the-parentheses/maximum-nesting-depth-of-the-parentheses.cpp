@@ -6,16 +6,13 @@ public:
         for(int i=0;i<n;i++){
             if(s[i]=='('){
                 count=count+1;  
-                // if(count>max){
-                //     max=count;
-                // } 
+                if(count>max){
+                    max=count;
+                } 
             }
             if(s[i]==')'){
                 count--;
             }
-            if(count>max){
-                    max=count;
-            } 
         }
         return max;
     }
