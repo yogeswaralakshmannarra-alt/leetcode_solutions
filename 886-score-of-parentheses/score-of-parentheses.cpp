@@ -9,18 +9,19 @@ public:
             if(s[i] == '(') {
                 st.push(0);
             }
+
             else {
-                int x = st.top();
+                int count = st.top();
                 st.pop();
 
-                if(x == 0) {
-                    x = 1;
+                if(count == 0) {
+                    count = 1;
                 }
                 else {
-                    x = 2 * x;
+                    count = count * 2;
                 }
 
-                st.top() += x;
+                st.top() += count;
             }
         }
 
