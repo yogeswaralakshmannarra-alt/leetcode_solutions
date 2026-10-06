@@ -11,12 +11,10 @@ public:
             if(candidates[i]>target){
                 continue;
             }
-    
             temp.push_back(candidates[i]);
             solve(candidates,target-candidates[i],i);
             temp.pop_back(); 
-        }
-        
+        }  
     }
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
         solve(candidates,target,0);
