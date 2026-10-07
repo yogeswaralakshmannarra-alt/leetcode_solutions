@@ -2,12 +2,12 @@ class Solution {
 public:
     vector<vector<int>>ans;
     vector<int>temp;
-    void solve(int n, int k,int index){
+    void solve(int n, int k,int ind){
         if(temp.size()==k){
             ans.push_back(temp);
             return;
         }
-        for(int i=index;i<=n;i++){
+        for(int i=ind;i<=n;i++){
             temp.push_back(i);
             solve(n,k,i+1);
             temp.pop_back();
